@@ -21,9 +21,6 @@
     <ClCompile Include="run1.h">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="GraphicAPI.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="g_7470.h">
       <Filter>头文件</Filter>
     </ClCompile>
@@ -36,9 +33,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Skynet.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicAPI.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Z.h">
@@ -55,10 +49,5 @@
     <Media Include="..\..\..\下载\M800004eOxL94cemiX.mp3">
       <Filter>资源文件</Filter>
     </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="GraphicAPI.dll">
-      <Filter>头文件</Filter>
-    </None>
   </ItemGroup>
 </Project>

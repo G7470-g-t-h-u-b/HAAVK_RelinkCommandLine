@@ -127,14 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GraphicAPI.cpp" />
     <ClCompile Include="g_7470.h" />
     <ClCompile Include="HAAVK_RelinkCommandLine.cpp" />
     <ClCompile Include="run1.h" />
     <ClCompile Include="_Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GraphicAPI.h" />
     <ClInclude Include="include.h" />
     <ClInclude Include="Skynet.h" />
     <ClInclude Include="Tools.h" />
@@ -143,9 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="..\..\..\下载\M800004eOxL94cemiX.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="GraphicAPI.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

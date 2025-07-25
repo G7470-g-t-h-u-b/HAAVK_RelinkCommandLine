@@ -452,7 +452,7 @@ int main() {
 		//}
 		else {
 			seconds = time(nullptr);
-			logs_ << '[' << seconds << ']' << "ÃüÁî´íÎó£¬ÊäÈë£º" << CommandData << endl;
+			logs_ << '[' << seconds << ']'<<"[main Warning]" << "ÃüÁî´íÎó£¬ÊäÈë£º" << CommandData << endl;
 			SetConsoleTextAttribute(GetStdHandle(STD_ERROR_HANDLE), 4);
 			cout << "ÃüÁî´íÎó" << endl;
 			SetConsoleTextAttribute(GetStdHandle(STD_ERROR_HANDLE), 15);
