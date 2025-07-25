@@ -3,8 +3,8 @@
 using namespace _Tl;
 extern std::fstream logs_;
 time_t sec;
-void _Tools::Out::print( std::string data, const unsigned long long n ) {
-	for (unsigned long long i = 1; i <= n; i++) {gettime std::cout << data;}
+void _Tools::Out::print( std::string data, const unsigned int n ) {
+	for (unsigned int i = 1; i <= n; i++) {gettime std::cout << data;}
 	logs_ << '[' << sec << ']' << "_Tl::_Tools::Out::print() data:"
 		<< data << " n:" << n << std::endl;
 }
