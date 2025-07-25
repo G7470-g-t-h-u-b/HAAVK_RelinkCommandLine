@@ -5,7 +5,7 @@ namespace _Tl {
 	public:
 		class Out {
 		public:
-			void print( std::string data, const unsigned int n );
+			void print( std::string data, const unsigned long long n );
 			void print( std::string data );
 			void println( std::string data, const unsigned long long n );
 			void println( std::string data );

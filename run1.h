@@ -1,5 +1,4 @@
 #include "a.h"
-#include "GraphicAPI.h"
 using namespace std;
 static fstream fileRunLogs("E:\\HAAVK\\logs\\fileRunLogs.txt",ios::out);
 static time_t t;
