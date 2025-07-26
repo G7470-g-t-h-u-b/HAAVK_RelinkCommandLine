@@ -32,21 +32,23 @@ void _Tools::Out::ln() { printf( "\n" ); }
 void _Tl::_Tools::Out::info( const unsigned short n, std::string data ) {
 	time_t t = time( nullptr );
 	switch (n) {
-	case 0: {
-		gettime
+	case 0: 
+		gettime;
 		std::cout << '[' << t << ']' << "[main INFO] " << data << std::endl;
 		logs_ << '[' + sec + "][_Tl::_Tools::Out::info() n(type):"
 			<< n << " data:" + data << std::endl;
-	}
-	case 1: {
-		gettime
+	case 1: 
+		gettime;
 		logs_ << '[' + sec + "][_Tl::Tools::Out::info() n(type):"
 			<< n << " data:" + data << std::endl;
 		SetConsoleTextAttribute( GetStdHandle( STD_ERROR_HANDLE ), 4 );
 		std::cout << '[' << t << ']' << "[main ERROR]" << data << std::endl;
 		SetConsoleTextAttribute( GetStdHandle( STD_ERROR_HANDLE ), 15 );
-	}
+	
 	default:
+		gettime;
+		logs_ << '[' + sec + "][_Tl::Tools::Out::info() n(type):"
+			<< n << "(ERROR type) data:" << data << std::endl;
 		break;
 	}
 }
