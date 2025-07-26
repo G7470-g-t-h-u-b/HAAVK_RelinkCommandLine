@@ -4,9 +4,9 @@
 #include "Z.h"
 //#include "_Tools.h"
 #include "g_7470.h"
+using namespace _Tl;
 //#include "GraphicAPI.h"
 #define hgettime seconds=time(nullptr)
-using namespace _Tl;
 using namespace std;
 string CommandData;
 //_Tl::_Tools tools;
@@ -270,8 +270,11 @@ int main() {
 			cout << ver << endl << v << endl;
 		}
 		else if (CommandData == "initgrath") {
+			hgettime;
 			unsigned int a, b, c;
 			cin >> a >> b >> c;
+			logs_ << '[' << seconds << ']' << "[EasyX INFO]: command line: initgrath,width:" <<
+				a << " ,height:" << b << ",flag:" << c << endl;
 			initgraph(a, b, c);
 		}
 		else if (CommandData == "setbkcolor") {
@@ -280,6 +283,7 @@ int main() {
 			setbkcolor(a);
 		}
 		else if (CommandData == "cleardevice") {
+			tools.out.outlogs( "EasyX INFO", "cleardevice" );
 			cleardevice();
 		}
 		else if (CommandData == "line") {
