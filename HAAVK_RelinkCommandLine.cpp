@@ -45,11 +45,17 @@ const string HAAVK_MAP="\n"
 template<typename T>T add(T a, T b) {
 	return a + b;
 }
+static void world() {
+	system( "cls" );
+	tools.out.println( " ", 10 );
+	
+}
 static int FileWrite() {
 	string string5, string8;
 	ofstream f;
 	cin >> string8;
 	f.open(string8);
+	tools.out.outlogs( "main INFO", "fileWrite,file name:" + string8 );
 	cout << "请输入文件内容，输入EXIT退出" << endl;
 	while (true) {
 		cout << ">>>";
@@ -111,9 +117,6 @@ static void help_(string help) {
 static void DEBUG() {
 
 }
-//static void HAAVK_Z() {
-//	InitComGraph(1042, 550, RGB(0, 0, 0), "HAAVK_Z", 100);
-//}
 static void HAAVK_SKY() {
 	for (int i = 0;i < 100;i++) {
 		SKY >> type[i];

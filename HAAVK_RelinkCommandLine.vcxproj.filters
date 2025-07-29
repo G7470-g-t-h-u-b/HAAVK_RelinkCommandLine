@@ -27,6 +27,9 @@
     <ClCompile Include="_Tools.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include.h">
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="_Tools.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

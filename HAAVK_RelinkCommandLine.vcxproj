@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="g_7470.h" />
     <ClCompile Include="HAAVK_RelinkCommandLine.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="run1.h" />
     <ClCompile Include="_Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Skynet.h" />
     <ClInclude Include="Tools.h" />
     <ClInclude Include="Z.h" />

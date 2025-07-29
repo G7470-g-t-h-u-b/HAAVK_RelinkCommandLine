@@ -18,12 +18,9 @@ void _Tools::Out::print( std::string data ) {
 }
 void _Tools::Out::println( std::string data, const unsigned long long n ) {
 	gettime;
-	//logs_ << "[µ÷ÊÔ]:²âÊÔÊä³ö"<<std::endl;
-	//std::cout << "test" << std::endl;
 	for (unsigned int i = 1; i <= n; i++) {std::cout << data << std::endl;}
-	//std::cout << "test" << std::endl;
-	logs_ << '[' + sec + "][_Tools INFO] _Tl::_Tools::Out::println()  data:" +
-		data << "n:" << n << std::endl;
+	logs_ << '[' + sec + "][_Tools INFO] _Tl::_Tools::Out::println()  data:\"" +
+		data << "\"n:" << n << std::endl;
 }
 void _Tools::Out::println( std::string data ) {
 	gettime;
