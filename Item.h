@@ -1,9 +1,18 @@
 #include "_Tools.h"
 using namespace std;
 using namespace _Tl;
-string id[ 1000 ];
-int ids = 0;
+int ids = 1;
+class ItemData {
+public:
+	string id[ 10000 ];
+	string name[ 10000 ];
+	int max_number[ 10000 ];
+	int weight_[ 10000 ];
+	bool gunTF[ 10000 ];
+	bool swordTF[ 10000 ];
+};
+ItemData itemData;
 class Item {
 public:
-	Item( string name,string id,int max_number,int number,int weight,bool gun_tf,bool sword_tf);
+	Item( string name_,string id_,int max_number_,int weight_,bool gun_tf_,bool sword_tf_);
 };
