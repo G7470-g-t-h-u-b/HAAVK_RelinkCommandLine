@@ -16,7 +16,9 @@ const string v = "25.7.01:\n1:Ìí¼ÓFileWrite\n2:Ìí¼Óread\n3:ÃüÁî´íÎóÊ±µÄÊä³öµÄÎÄ±
 "25.7.02:\n1:Ìí¼ÓÁËÎÄ¼şÔËĞĞµÄÈÕÖ¾\n2:½«ÃüÁîĞĞµÄÈÕÖ¾ÎÄ¼şÃû¸ÄÎªRelinkCommandLineLogs.txt\n3:ĞŞ¸´ÁËrun1.hÖĞÖ»ÄÜÔËĞĞµÚÒ»¶ÎÓï¾äµÄÎÊÌâ\n"
 "4:ifÖĞ¿É¼ÌĞøÊ¹ÓÃÒ»´Îif\n5:Ìí¼Ó_for_Óï¾ä[_for_ <a1> code_start <...>]\n6:ÒÆ³ıÁËHerobrine\n\n"
 "25.7.03:\n1:Ìí¼ÓÁË²¿·Ö»ùÓÚEasyXÍ¼ĞÎ¿âµÄ»æÍ¼ÃüÁî\n2:ÒÆ³ıÁË00\n3:(ÏîÄ¿ÎÄ¼ş)Ìí¼Ó  Z <N fileName>(Z.h)\n4:Æô¶¯Ê±µÄ[µ÷ÊÔ]\n"
-"5:(ÏîÄ¿ÎÄ¼ş)_Tools.h  _Tools.cpp\n6:²¹È«ÁË²¿·ÖÈÕÖ¾Êä³ö\n7:ĞŞ¸ÄÁË²¿·ÖÈÕÖ¾Êä³ö";
+"5:(ÏîÄ¿ÎÄ¼ş)_Tools.h  _Tools.cpp\n6:²¹È«ÁË²¿·ÖÈÕÖ¾Êä³ö\n7:ĞŞ¸ÄÁË²¿·ÖÈÕÖ¾Êä³ö\n"
+"2025/7/29,25.7.03-25_00a:+Item.cpp,+Item.h,+/-H_RCL.cpp\n"
+"2025/7/29,25.7.03-25_00b:+/-Item.cpp,+/-Item.h,+/-H_RCL.cpp\n";
 string sky_name[100], sky_c[100], sky[100], type[100], place[100];
 time_t seconds;
 fstream logs_("E:\\HAAVK\\logs\\RelinkCommandLineLogs.txt", ios::out);
@@ -47,8 +49,9 @@ template<typename T>T add(T a, T b) {
 }
 static void world() {
 	system( "cls" );
-	tools.out.println( " ", 10 );
-	
+	tools.out.print( "\n", 10 );
+	Item TEST_ITEM1( "TestItem1", "test_item_1", 64, 0.02, 0, 0 );
+	TEST_ITEM1.setSwordData( "test_item_1", 2.5 );
 }
 static int FileWrite() {
 	string string5, string8;
@@ -418,6 +421,9 @@ int main() {
 			string help;
 			cin >> help;
 			help_(help);
+		}
+		else if (CommandData == "test0") {
+			world();
 		}
 		//getLevel:
 		/*else if (CommandData == "getLevel3") {
