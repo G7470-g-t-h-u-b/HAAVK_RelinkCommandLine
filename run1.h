@@ -1,5 +1,6 @@
 #include "a.h"
-using namespace std;
+using std::string; using std::cout; using std::cin; using std::time_t;
+using std::fstream; using std::ofstream; using std::ifstream; using std::ios; using std::endl;
 static fstream fileRunLogs("E:\\HAAVK\\logs\\fileRunLogs.txt",ios::out);
 static time_t t;
 static unsigned int fileRunIntVarCnt = 0;

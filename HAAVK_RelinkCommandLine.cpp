@@ -7,7 +7,9 @@
 using namespace _Tl;
 //#include "GraphicAPI.h"
 #define hgettime seconds=time(nullptr)
-using namespace std;
+//using namespace std;
+using std::string; using std::cout; using std::cin; using std::time_t;
+using std::fstream; using std::ofstream; using std::ifstream; using std::ios; using std::endl;
 string CommandData;
 //_Tl::_Tools tools;
 //extern bool debug__;
@@ -18,12 +20,15 @@ const string v = "25.7.01:\n1:Ìí¼ÓFileWrite\n2:Ìí¼Óread\n3:ÃüÁî´íÎóÊ±µÄÊä³öµÄÎÄ±
 "25.7.03:\n1:Ìí¼ÓÁË²¿·Ö»ùÓÚEasyXÍ¼ĞÎ¿âµÄ»æÍ¼ÃüÁî\n2:ÒÆ³ıÁË00\n3:(ÏîÄ¿ÎÄ¼ş)Ìí¼Ó  Z <N fileName>(Z.h)\n4:Æô¶¯Ê±µÄ[µ÷ÊÔ]\n"
 "5:(ÏîÄ¿ÎÄ¼ş)_Tools.h  _Tools.cpp\n6:²¹È«ÁË²¿·ÖÈÕÖ¾Êä³ö\n7:ĞŞ¸ÄÁË²¿·ÖÈÕÖ¾Êä³ö\n"
 "2025/7/29,25.7.03-25_00a:+Item.cpp,+Item.h,+/-H_RCL.cpp\n"
-"2025/7/29,25.7.03-25_00b:+/-Item.cpp,+/-Item.h,+/-H_RCL.cpp\n";
+"2025/7/29,25.7.03-25_00b:+/-Item.cpp,+/-Item.h,+/-H_RCL.cpp\n\n"
+"2025/8/2: 25.7.x -> 25.8.x\n"
+"2025/8/2: ver -> 25.8.1\n25.8.1:\n"
+"25.8.1-25_01a:\n using namespace std; -> using std::string;using std::cin;... (ÆäËû¸Ä¶¯Ïê¼ûgithub)";
 string sky_name[100], sky_c[100], sky[100], type[100], place[100];
 time_t seconds;
 fstream logs_("E:\\HAAVK\\logs\\RelinkCommandLineLogs.txt", ios::out);
 ifstream SKY("E:\\HAAVK\\sky\\sky.haavk", ios::out), HAAVK_data("E:\\HAAVK\\sky\\data.haavk");
-const string ver = "µ±Ç°°æ±¾25.7.03";
+const string ver = "µ±Ç°°æ±¾25.8.1";
 const string HAAVK_FACTORIES_MAP = "\n"
 "                []              []\n"
 "              A12146          A97882\n"

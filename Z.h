@@ -3,7 +3,8 @@
 #define T true
 #define F false
 #define zgettime se=time(nullptr)
-using namespace std;
+using std::string; using std::cout; using std::cin; using std::time_t;
+using std::fstream; using std::ofstream; using std::ifstream; using std::ios; using std::endl;
 using namespace _Tl;
 static ifstream Zin;
 time_t se;
@@ -21,8 +22,9 @@ static void Zprintln( unsigned long long n, string s2 ) {
 		n << " data" + s2 << endl;
 	tools.out.println( s2, n );
 }
-static void Zif() {//
-
+static void Zif() {//if Z( <varname> <type> <varname> )Z Z{ c }Z
+	string string15, string16, string17;
+	Zin >> string15 >> string16 >> string17;
 }
 static void Z( string fileName ) {
 	string s1, s2;

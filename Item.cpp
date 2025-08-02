@@ -1,5 +1,6 @@
 #include "Item.h"
-using namespace std;
+using std::string; using std::cout; using std::cin; using std::time_t;
+using std::fstream; using std::ofstream; using std::ifstream; using std::ios; using std::endl;
 using namespace _Tl;
 Item::Item( string name_, string id_, int max_number_,
 	double weight_, bool gun_tf, bool sword_tf ){
@@ -17,7 +18,7 @@ void Item::setSwordData( string id, double attack_damage_ ){
 			itemData.attack_damage[ i ] = attack_damage_;
 			return;
 		} else if(itemData.id[ i ] == id && itemData.swordTF[i] == false) {
-			cout << "[ERROR] itemData.sword=false,This is not a sword!" << endl;
+			cout << "[ERROR] itemData.sword=false,This is not a \"sword!\"" << endl;
 		}
 	}
 }

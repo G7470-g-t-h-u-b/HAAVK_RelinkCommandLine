@@ -1,7 +1,14 @@
 #include "_Tools.h"
-using namespace std;
+using std::string; using std::cout; using std::cin; using std::time_t;
+using std::fstream; using std::ofstream; using std::ifstream; using std::ios; using std::endl;
 using namespace _Tl;
 static int ids = 1;
+class Box {
+public:
+	string id;
+	int number;
+	double weight_;
+};
 class ItemData {
 public:
 	string id[ 10000 ];
