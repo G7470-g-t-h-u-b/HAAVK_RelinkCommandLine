@@ -1,7 +1,8 @@
 #include "_Tools.h"
-using std::string; using std::cout; using std::cin; using std::time_t;
-using std::fstream; using std::ofstream; using std::ifstream; using std::ios; using std::endl;
+using std::string; using std::cout; using std::cin; using std::time_t;using std::fstream;
+using std::ofstream; using std::ifstream; using std::ios; using std::endl;
 using namespace _Tl;
+extern fstream logs_;
 static int ids = 1;
 class Box {
 public:

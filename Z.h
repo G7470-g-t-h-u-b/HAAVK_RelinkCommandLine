@@ -23,8 +23,15 @@ static void Zprintln( unsigned long long n, string s2 ) {
 	tools.out.println( s2, n );
 }
 static void Zif() {//if Z( <varname> <type> <varname> )Z Z{ c }Z
-	string string15, string16, string17;
-	Zin >> string15 >> string16 >> string17;
+	string string15, string16, string17, string18;
+	Zin >> string15 >> string16 >> string17 >> string18;
+	if(string15!="Z("){
+		logs_ << '[' + se + ']' << "[Zrun ERROR] <Z.h> Zif() error:Z( not found" << endl;
+		SetConsoleTextAttribute( GetStdHandle( STD_ERROR_HANDLE ), 4 );
+		cout << "Error:Z( not found" << endl;
+		SetConsoleTextAttribute( GetStdHandle( STD_ERROR_HANDLE ), 15 );
+		return;
+	}
 }
 static void Z( string fileName ) {
 	string s1, s2;

@@ -49,7 +49,7 @@ static void fileRunIf2() {
         if (Var1 = false || Var2 == false) {
             t = time(nullptr);
             fileRunLogs << '[' << t << ']' << "错误:变量不存在" << endl;
-            cout << "请检查你的代码";
+			cout << "错误:变量不存在" << endl;
             return;
         }
         if (var_1 == var_2) {
@@ -70,7 +70,7 @@ static void fileRunIf2() {
         if (Var1 == false || Var2 == false) {
             t = time(nullptr);
             fileRunLogs << '[' << t << ']' << "错误:变量不存在";
-            cout << "请检查你的代码";
+			cout << "错误：变量不存在" << endl;
             return;
         }
         if (var_1 <= var_2) {

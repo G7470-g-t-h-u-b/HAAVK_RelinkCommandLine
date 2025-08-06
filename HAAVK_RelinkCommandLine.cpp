@@ -8,8 +8,6 @@ using namespace _Tl;
 //#include "GraphicAPI.h"
 #define hgettime seconds=time(nullptr)
 //using namespace std;
-using std::string; using std::cout; using std::cin; using std::time_t;
-using std::fstream; using std::ofstream; using std::ifstream; using std::ios; using std::endl;
 string CommandData;
 //_Tl::_Tools tools;
 //extern bool debug__;
@@ -23,7 +21,8 @@ const string v = "25.7.01:\n1:Ìí¼ÓFileWrite\n2:Ìí¼Óread\n3:ÃüÁî´íÎóÊ±µÄÊä³öµÄÎÄ±
 "2025/7/29,25.7.03-25_00b:+/-Item.cpp,+/-Item.h,+/-H_RCL.cpp\n\n"
 "2025/8/2: 25.7.x -> 25.8.x\n"
 "2025/8/2: ver -> 25.8.1\n25.8.1:\n"
-"25.8.1-25_01a:\n using namespace std; -> using std::string;using std::cin;... (ÆäËû¸Ä¶¯Ïê¼ûgithub)";
+"25.8.1-25_01a:\n using namespace std; -> using std::string;using std::cin;... (ÆäËû¸Ä¶¯Ïê¼ûgithub)\n"
+"25.8.2-25s02a:\n tools: +_Tl::Tools::pause() +_Tl::Tools::Out::outText +_Tl::_Tools::setcolor(ÆäËû¸Ä¶¯Ïê¼ûgithub)";
 string sky_name[100], sky_c[100], sky[100], type[100], place[100];
 time_t seconds;
 fstream logs_("E:\\HAAVK\\logs\\RelinkCommandLineLogs.txt", ios::out);
@@ -52,11 +51,19 @@ const string HAAVK_MAP="\n"
 template<typename T>T add(T a, T b) {
 	return a + b;
 }
+static void world3_0() {
+	system( "cls" );
+	tools.out.outText( "<player> ?" );
+	Sleep( 500 );
+	tools.out.outText( "<player> ÷ö»Ò?" );
+	tools.pause();
+	Sleep( 2000 );
+	system( "cls" );
+}
 static void world() {
 	system( "cls" );
 	tools.out.print( "\n", 10 );
 	Item TEST_ITEM1( "TestItem1", "test_item_1", 64, 0.02, 0, 0 );
-	TEST_ITEM1.setSwordData( "test_item_1", 2.5 );
 }
 static int FileWrite() {
 	string string5, string8;
@@ -162,7 +169,7 @@ static void HAAVK_SKY() {
 			cout << "¶¯Á¦Ä£¿éÊÜËð";
 		}
 		else {
-			cout << "ÎÞÐ§×´Ì¬Âë";
+			cout << "ÎÞÐ§×´Ì¬";
 		}
 		cout << endl;
 		if (SKY.end == true) {
@@ -174,7 +181,7 @@ static void HAAVK_SKY() {
 	}
 	SKY.close();
 	cout << "<ÌìÍøÎÀÐÇ±àºÅ> <ÃüÁî>" << endl;
-	
+	cin >> CommandData;
 }
 static void HAAVK_FACTORIES(string s) {
 	random_device temperature;
@@ -256,14 +263,21 @@ static void read() {
 	ifstream1.close();
 }
 int main() {
-	cout << "[µ÷ÊÔ]:";
-	string sss = "hello";
-	cout << '[' + sss << endl;
-	system("pause");
-	system("md E:\\HAAVK\\logs");
-	seconds = time(nullptr);
-	cout << "»¶Ó­Ê¹ÓÃRelinkÄÔ»ú½Ó¿ÚÄÚÖÃÃüÁîÐÐ£¬´Ë°æ±¾ÊÇ±»ÐÞ¸Ä¹ýµÄÍ¨ÓÃÃüÁîÐÐ\n";
-	cout << "ÊäÈëhelp-all²é¿´¿ÉÊ¹ÓÃµÄÃüÁî\n";
+	system( "pause" );
+	ifstream s( "E:\\HAAVK\\t.txt" );
+	bool B;
+	s >> B;
+	if (B == 1) {
+		cout << "[µ÷ÊÔ]:";
+		string sss = "hello";
+		cout << '[' + sss << endl;
+		bool d = false;
+		cout << "[µ÷ÊÔ]" + to_string( d ) + "\n";
+		seconds = time( nullptr );
+		cout << "»¶Ó­Ê¹ÓÃRelinkÄÔ»ú½Ó¿ÚÄÚÖÃÃüÁîÐÐ£¬´Ë°æ±¾ÊÇ±»ÐÞ¸Ä¹ýµÄÍ¨ÓÃÃüÁîÐÐ\n";
+		cout << "ÊäÈëhelp-all²é¿´¿ÉÊ¹ÓÃµÄÃüÁî\n";
+	}
+	system( "md E:\\HAAVK\\logs" );
 	cout << "µ±Ç°°æ±¾" << ver << endl;
 	logs_ << '[' << seconds << ']' << "Æô¶¯Ö÷Ñ­»·" << endl;
 	while (true)
@@ -427,8 +441,16 @@ int main() {
 			cin >> help;
 			help_(help);
 		}
+		else if (CommandData == "world3/0") {
+			world3_0();
+		}
 		else if (CommandData == "test0") {
 			world();
+		}
+		else if (CommandData == "testouttext") {
+			tools.setcolor( 4 );
+			tools.out.outText( "10000000" );
+			tools.setcolor( 15 );
 		}
 		//getLevel:
 		/*else if (CommandData == "getLevel3") {
@@ -468,6 +490,9 @@ int main() {
 			//tools.out.println( "test0" );
 			//tools.ln();
 		//}
+		else if (CommandData == "test1") {
+			tools.out.outText( "²âÊÔÎÄ±¾" );
+		}
 		else {
 			seconds = time(nullptr);
 			logs_ << '[' << seconds << ']'<<"[main Warning]" << "ÃüÁî´íÎó£¬ÊäÈë£º" << CommandData << endl;

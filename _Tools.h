@@ -12,9 +12,12 @@ namespace _Tl {
 			void ln();
 			void info(const unsigned short n,std::string data);
 			void outlogs( std::string type, std::string data );
+			void outText( std::string text );
 		};
 		Out out;
 		void ln();
+		void pause();
+		void setcolor(unsigned short color);
 	};
 	void ln();
 }
