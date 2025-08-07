@@ -21,8 +21,9 @@ const string v = "25.7.01:\n1:Ìí¼ÓFileWrite\n2:Ìí¼Óread\n3:ÃüÁî´íÎóÊ±µÄÊä³öµÄÎÄ±
 "2025/7/29,25.7.03-25_00b:+/-Item.cpp,+/-Item.h,+/-H_RCL.cpp\n\n"
 "2025/8/2: 25.7.x -> 25.8.x\n"
 "2025/8/2: ver -> 25.8.1\n25.8.1:\n"
-"25.8.1-25_01a:\n using namespace std; -> using std::string;using std::cin;... (ÆäËû¸Ä¶¯Ïê¼ûgithub)\n"
-"25.8.2-25s02a:\n tools: +_Tl::Tools::pause() +_Tl::Tools::Out::outText +_Tl::_Tools::setcolor(ÆäËû¸Ä¶¯Ïê¼ûgithub)";
+"25.8.1-25_01a:\nusing namespace std; -> using std::string;using std::cin;... (ÆäËû¸Ä¶¯Ïê¼ûgithub)\n\n"
+"25.8.2-25s02a:\ntools: +_Tl::Tools::pause() +_Tl::Tools::Out::outText +_Tl::_Tools::setcolor(ÆäËû¸Ä¶¯Ïê¼ûgithub)\n"
+"25.8.2-25s03a:\nZ.h(ÆäËû¸Ä¶¯Ïê¼ûgithub)\n\n";
 string sky_name[100], sky_c[100], sky[100], type[100], place[100];
 time_t seconds;
 fstream logs_("E:\\HAAVK\\logs\\RelinkCommandLineLogs.txt", ios::out);
@@ -56,7 +57,8 @@ static void world3_0() {
 	tools.out.outText( "<player> ?" );
 	Sleep( 500 );
 	tools.out.outText( "<player> ÷ö»Ò?" );
-	tools.pause();
+	Sleep( 500 );
+	tools.out.outText( "<player> ÕâÊÇÊ²Ã´µØ·½?" );
 	Sleep( 2000 );
 	system( "cls" );
 }
