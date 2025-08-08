@@ -130,12 +130,15 @@
     <ClCompile Include="g_7470.h" />
     <ClCompile Include="HAAVK_RelinkCommandLine.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="run1.h" />
     <ClCompile Include="_Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Skynet.h" />
     <ClInclude Include="Tools.h" />
     <ClInclude Include="Z.h" />
@@ -143,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="..\..\..\下载\M800004eOxL94cemiX.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HAAVK_RelinkCommandLine.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

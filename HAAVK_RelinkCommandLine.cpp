@@ -28,7 +28,7 @@ string sky_name[100], sky_c[100], sky[100], type[100], place[100];
 time_t seconds;
 fstream logs_("E:\\HAAVK\\logs\\RelinkCommandLineLogs.txt", ios::out);
 ifstream SKY("E:\\HAAVK\\sky\\sky.haavk", ios::out), HAAVK_data("E:\\HAAVK\\sky\\data.haavk");
-const string ver = "当前版本25.8.1";
+const string ver = "当前版本25.8.2";
 const string HAAVK_FACTORIES_MAP = "\n"
 "                []              []\n"
 "              A12146          A97882\n"
@@ -62,10 +62,31 @@ static void world3_0() {
 	Sleep( 2000 );
 	system( "cls" );
 }
+static void world0_0_w() {
+	ExMessage msgw = { 0 };
+	while (true) {
+		if (peekmessage( &msgw, EX_MOUSE )) {
+			if (msgw.mbutton == WM_LBUTTONDOWN) {
+				cout << "l\n";
+			}
+		}
+	}
+}
+static void world0_0() {
+	initgraph( 1080, 500, 1 );
+	setbkcolor( BLACK );
+	cleardevice();
+	thread world0_0w( world0_0_w );
+	world0_0w.join();
+	system( "cls" );
+	tools.out.outText( "你好" );
+	tools.pause();
+}
 static void world() {
 	system( "cls" );
 	tools.out.print( "\n", 10 );
 	Item TEST_ITEM1( "TestItem1", "test_item_1", 64, 0.02, 0, 0 );
+	world0_0();
 }
 static int FileWrite() {
 	string string5, string8;
